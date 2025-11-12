@@ -134,6 +134,10 @@ def formula_buckling(data: BucklingInput) -> float:
     else:
         print(f"⚠️ Invalid geometry for shape={shape} → E={E}, I={I}, L={L}")
         return 0.0
+    
+@app.get("/")
+def test():
+    return {"message": "Server running..."}
 
 
 # -------------------------
