@@ -99,7 +99,7 @@ input_data = {
 if shape != "Select" and length > 0:
     if st.button("Predict Buckling Load"):
         try:
-            API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
+            API_URL = os.getenv("API_URL", "https://project1-qb2l.onrender.com")
             response = requests.post(f"{API_URL}/predict", json=input_data)
             result = response.json()
 
